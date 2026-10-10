@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parvaa Concepts Atelier Pvt Ltd | Luxury Interior Design Studio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Cinzel & Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        atelier: {
+                            50: '#f8f6f2',
+                            100: '#ede8df',
+                            200: '#d7ccbc',
+                            300: '#bca993',
+                            700: '#7a6752',
+                            800: '#524334',
+                            900: '#2b2219',
+                            950: '#17120d'
+                        },
+                        gold: {
+                            400: '#e5c158',
+                            500: '#d4af37',
+                            600: '#b89728',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cinzel"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #17120d;
+            color: #ede8df;
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Cinzel', serif;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-atelier-950">
+
+    <!-- Top Bar -->
+    <div class="bg-atelier-950 text-atelier-300 text-xs py-2.5 px-4 sm:px-8 border-b border-atelier-800/40">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-6">
+                <span><i class="fa-solid fa-location-dot text-gold-500 mr-2"></i> Luxury Interior Design Studio</span>
+                <span class="hidden md:inline"><i class="fa-solid fa-sparkles text-gold-500 mr-2"></i> Timeless. Tailored. Thoughtful. ✨</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="tel:08123868687" class="hover:text-gold-400 transition-colors"><i class="fa-solid fa-phone text-gold-500 mr-2"></i> 08123868687</a>
+                <a href="mailto:parvaaconceptsatelier87@gmail.com" class="hover:text-gold-400 transition-colors"><i class="fa-solid fa-envelope text-gold-500 mr-2"></i> parvaaconceptsatelier87@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Sticky Navigation -->
+    <header class="sticky top-0 z-40 bg-atelier-900/95 backdrop-blur-md border-b border-atelier-800 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 h-24 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3.5 group">
+                <div class="w-12 h-12 rounded-full bg-atelier-950 border-2 border-gold-500/60 flex items-center justify-center text-gold-500 text-xl shadow-lg group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-feather-pointed"></i>
+                </div>
+                <div>
+                    <span class="text-lg sm:text-xl font-serif font-bold tracking-wider text-white block leading-tight">Parvaa Concepts Atelier</span>
+                    <span class="text-[10px] uppercase tracking-[0.25em] text-gold-400 font-semibold block mt-0.5">Pvt Ltd • Luxury Interiors</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-atelier-200">
+                <a href="#home" class="hover:text-gold-400 transition-colors">Home</a>
+                <a href="#about" class="hover:text-gold-400 transition-colors">Philosophy</a>
+                <a href="#services" class="hover:text-gold-400 transition-colors">Services</a>
+                <a href="#portfolio" class="hover:text-gold-400 transition-colors">Portfolio</a>
+                <a href="#process" class="hover:text-gold-400 transition-colors">Process</a>
+                <a href="#testimonials" class="hover:text-gold-400 transition-colors">Testimonials</a>
+                <a href="#contact" class="hover:text-gold-400 transition-colors">Contact</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="#contact" class="bg-gold-500 hover:bg-gold-600 text-atelier-950 px-6 py-3 rounded-full font-bold text-xs uppercase tracking-widest transition-all shadow-lg hover:shadow-gold-500/20 flex items-center gap-2">
+                    <i class="fa-regular fa-calendar-days"></i> Book Consultation
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="lg:hidden text-gold-500 text-2xl focus:outline-none p-2">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-atelier-950 border-b border-atelier-800 px-6 py-6 space-y-4">
+            <a href="#home" class="block py-2 text-atelier-100 font-medium border-b border-atelier-800/60">Home</a>
+            <a href="#about" class="block py-2 text-atelier-100 font-medium border-b border-atelier-800/60">Philosophy</a>
+            <a href="#services" class="block py-2 text-atelier-100 font-medium border-b border-atelier-800/60">Services</a>
+            <a href="#portfolio" class="block py-2 text-atelier-100 font-medium border-b border-atelier-800/60">Portfolio</a>
+            <a href="#process" class="block py-2 text-atelier-100 font-medium border-b border-atelier-800/60">Process</a>
+            <a href="#testimonials" class="block py-2 text-atelier-100 font-medium border-b border-atelier-800/60">Testimonials</a>
+            <a href="#contact" class="block py-2 text-atelier-100 font-medium">Contact</a>
+            <div class="pt-4">
+                <a href="#contact" class="w-full text-center block bg-gold-500 text-atelier-950 py-3 rounded-full font-bold text-xs uppercase tracking-widest">
+                    Book Consultation
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-atelier-950 text-white overflow-hidden min-h-[90vh] flex items-center py-20">
+        <div class="absolute inset-0 z-0 opacity-40">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1920" alt="Luxury Interior Living Room" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-atelier-950 via-atelier-950/85 to-transparent z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-8 space-y-8">
+                <div class="inline-flex items-center gap-2 bg-gold-500/10 text-gold-400 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-[0.2em] border border-gold-500/30">
+                    <i class="fa-solid fa-crown text-gold-500"></i> Interior Design Studio
+                </div>
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold tracking-tight leading-[1.1]">
+                    Timeless. Tailored. <span class="text-gold-400 block mt-2">Thoughtful.</span>
+                </h1>
+                <p class="text-atelier-200 text-lg sm:text-xl max-w-2xl font-light leading-relaxed">
+                    Designing spaces that elevate lifestyles 🌿. Specializing in bespoke luxury residential and commercial interiors that seamlessly merge sophistication, elegance, and supreme comfort.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#portfolio" class="bg-gold-500 hover:bg-gold-600 text-atelier-950 px-8 py-4 rounded-full font-bold text-xs uppercase tracking-widest transition-all shadow-2xl hover:translate-y-[-2px] flex items-center gap-2">
+                        Explore Portfolio <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="border border-gold-500/50 hover:border-gold-400 hover:text-gold-400 text-white px-8 py-4 rounded-full font-bold text-xs uppercase tracking-widest transition-all flex items-center gap-2">
+                        Schedule Consultation <i class="fa-regular fa-calendar-check"></i>
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-3 gap-6 pt-10 border-t border-atelier-800/80 mt-12 max-w-xl">
+                    <div>
+                        <div class="text-3xl sm:text-4xl font-serif font-bold text-gold-400">100+</div>
+                        <div class="text-xs text-atelier-300 uppercase tracking-wider mt-1">Spaces Elevated</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl sm:text-4xl font-serif font-bold text-gold-400">100%</div>
+                        <div class="text-xs text-atelier-300 uppercase tracking-wider mt-1">Bespoke Design</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl sm:text-4xl font-serif font-bold text-gold-400">Excellence</div>
+                        <div class="text-xs text-atelier-300 uppercase tracking-wider mt-1">Turnkey Execution</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us / Philosophy Section -->
+    <section id="about" class="py-24 lg:py-32 bg-atelier-900 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                <div class="lg:col-span-6 relative">
+                    <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-2 border-gold-500/20">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800" alt="Luxury Interior Architecture" class="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                </div>
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-gold-400 text-xs font-semibold uppercase tracking-[0.25em]">
+                        <i class="fa-solid fa-leaf"></i> Our Design Philosophy
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white leading-tight">
+                        Crafting Environments That Reflect Your Essence
+                    </h2>
+                    <p class="text-atelier-200 leading-relaxed font-light text-base sm:text-lg">
+                        At <span class="font-semibold text-white">Parvaa Concepts Atelier Pvt Ltd</span>, we believe that interior design is much more than aesthetics—it is about curating experiences, framing moments, and shaping moods. Every project is approached with unwavering attention to detail, balancing architectural integrity with refined tactile luxury.
+                    </p>
+                    <p class="text-atelier-300 leading-relaxed font-light">
+                        Whether designing sophisticated residential sanctuaries or high-impact commercial destinations, our ethos remains rooted in three guiding pillars: <strong class="text-gold-400 font-semibold">Timelessness</strong> that defies fleeting trends, <strong class="text-gold-400 font-semibold">Tailored</strong> precision crafted for individual lifestyles, and <strong class="text-gold-400 font-semibold">Thoughtful</strong> spatial optimization.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 pt-6">
+                        <div class="bg-atelier-950 p-6 rounded-2xl border border-atelier-800">
+                            <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-xl mb-4">
+                                <i class="fa-solid fa-house-chimney-user"></i>
+                            </div>
+                            <h4 class="font-serif font-bold text-white text-lg">Residential Interiors</h4>
+                            <p class="text-xs text-atelier-300 mt-2">Penthouses, villas, and luxury apartments designed for comfort and prestige.</p>
+                        </div>
+                        <div class="bg-atelier-950 p-6 rounded-2xl border border-atelier-800">
+                            <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-xl mb-4">
+                                <i class="fa-solid fa-building-shield"></i>
+                            </div>
+                            <h4 class="font-serif font-bold text-white text-lg">Commercial Interiors</h4>
+                            <p class="text-xs text-atelier-300 mt-2">Executive offices, high-end boutiques, and bespoke hospitality spaces.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 lg:py-32 bg-atelier-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
+                <div class="inline-flex items-center gap-2 text-gold-400 text-xs font-semibold uppercase tracking-[0.25em]">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Comprehensive Expertise
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white">
+                    Our Specialized Atelier Services
+                </h2>
+                <p class="text-atelier-300 text-base">
+                    From preliminary spatial planning to turnkey interior execution, we offer full-spectrum design solutions tailored to perfection.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-atelier-900/80 rounded-3xl p-8 border border-atelier-800 hover:border-gold-500/50 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 rounded-2xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-atelier-950 transition-colors">
+                            <i class="fa-solid fa-couch"></i>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-white mb-3">Residential Interiors</h3>
+                        <p class="text-atelier-300 text-sm font-light leading-relaxed">
+                            Luxurious living rooms, gourmet modular kitchens, serene master bedrooms, and spa-grade bathrooms designed around your personal narrative.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-atelier-800">
+                        <a href="#contact" class="text-xs font-bold uppercase tracking-wider text-gold-400 hover:text-white flex items-center gap-2">
+                            Inquire Now <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-atelier-900/80 rounded-3xl p-8 border border-atelier-800 hover:border-gold-500/50 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 rounded-2xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-atelier-950 transition-colors">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-white mb-3">Commercial Interiors</h3>
+                        <p class="text-atelier-300 text-sm font-light leading-relaxed">
+                            Prestigious corporate headquarters, collaborative workspaces, luxury retail boutiques, and upscale hospitality lounges that inspire success.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-atelier-800">
+                        <a href="#contact" class="text-xs font-bold uppercase tracking-wider text-gold-400 hover:text-white flex items-center gap-2">
+                            Inquire Now <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-atelier-900/80 rounded-3xl p-8 border border-atelier-800 hover:border-gold-500/50 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 rounded-2xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-atelier-950 transition-colors">
+                            <i class="fa-solid fa-chair"></i>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-white mb-3">Bespoke Furniture & Lighting</h3>
+                        <p class="text-atelier-300 text-sm font-light leading-relaxed">
+                            Custom-crafted furniture pieces, artisanal joinery, and statement architectural lighting installations created exclusively for your space.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-atelier-800">
+                        <a href="#contact" class="text-xs font-bold uppercase tracking-wider text-gold-400 hover:text-white flex items-center gap-2">
+                            Inquire Now <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-atelier-900/80 rounded-3xl p-8 border border-atelier-800 hover:border-gold-500/50 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 rounded-2xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-atelier-950 transition-colors">
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-white mb-3">Turnkey Execution</h3>
+                        <p class="text-atelier-300 text-sm font-light leading-relaxed">
+                            End-to-end project management covering civil works, electrical, HVAC, flawless finishing, and final styling with zero stress for clients.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-atelier-800">
+                        <a href="#contact" class="text-xs font-bold uppercase tracking-wider text-gold-400 hover:text-white flex items-center gap-2">
+                            Inquire Now <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Gallery Section -->
+    <section id="portfolio" class="py-24 lg:py-32 bg-atelier-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-flex items-center gap-2 text-gold-400 text-xs font-semibold uppercase tracking-[0.25em]">
+                    <i class="fa-solid fa-images"></i> Curated Projects
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white">
+                    Our Design Portfolio
+                </h2>
+                <p class="text-atelier-300 text-base">
+                    Explore a showcase of our finest luxury residential, commercial, and culinary design masterpieces.
+                </p>
+
+                <!-- Filter Buttons -->
+                <div id="filter-container" class="flex flex-wrap justify-center gap-3 pt-6">
+                    <button class="filter-btn px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all bg-gold-500 text-atelier-950 shadow-md" data-filter="all">All Projects</button>
+                    <button class="filter-btn px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all bg-atelier-950 text-atelier-300 hover:text-white border border-atelier-800" data-filter="residential">Residential</button>
+                    <button class="filter-btn px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all bg-atelier-950 text-atelier-300 hover:text-white border border-atelier-800" data-filter="commercial">Commercial</button>
+                    <button class="filter-btn px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all bg-atelier-950 text-atelier-300 hover:text-white border border-atelier-800" data-filter="kitchen">Kitchen & Bath</button>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="portfolio-item group relative rounded-3xl overflow-hidden shadow-2xl border border-atelier-800 bg-atelier-950" data-category="residential">
+                    <div class="relative h-80 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" alt="Modern Luxury Villa Living" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-atelier-950 via-atelier-950/40 to-transparent opacity-90 group-hover:opacity-95 transition-opacity"></div>
+                    </div>
+                    <div class="absolute inset-x-0 bottom-0 p-8 flex flex-col justify-end space-y-2">
+                        <span class="text-xs uppercase font-bold tracking-widest text-gold-400">Residential Interior</span>
+                        <h3 class="text-2xl font-serif font-bold text-white">The Emerald Sanctuary Villa</h3>
+                        <p class="text-atelier-300 text-xs font-light">Bespoke living room architecture with warm wooden paneling and ambient lighting.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item group relative rounded-3xl overflow-hidden shadow-2xl border border-atelier-800 bg-atelier-950" data-category="kitchen">
+                    <div class="relative h-80 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800" alt="Minimalist Gourmet Kitchen" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-atelier-950 via-atelier-950/40 to-transparent opacity-90 group-hover:opacity-95 transition-opacity"></div>
+                    </div>
+                    <div class="absolute inset-x-0 bottom-0 p-8 flex flex-col justify-end space-y-2">
+                        <span class="text-xs uppercase font-bold tracking-widest text-gold-400">Kitchen & Bath</span>
+                        <h3 class="text-2xl font-serif font-bold text-white">Aura Sage Modular Kitchen</h3>
+                        <p class="text-atelier-300 text-xs font-light">State-of-the-art culinary workspace featuring sage cabinetry and polished marble counters.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item group relative rounded-3xl overflow-hidden shadow-2xl border border-atelier-800 bg-atelier-950" data-category="commercial">
+                    <div class="relative h-80 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" alt="Executive Corporate Office" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-atelier-950 via-atelier-950/40 to-transparent opacity-90 group-hover:opacity-95 transition-opacity"></div>
+                    </div>
+                    <div class="absolute inset-x-0 bottom-0 p-8 flex flex-col justify-end space-y-2">
+                        <span class="text-xs uppercase font-bold tracking-widest text-gold-400">Commercial Interior</span>
+                        <h3 class="text-2xl font-serif font-bold text-white">Vanguard Executive Suite</h3>
+                        <p class="text-atelier-300 text-xs font-light">Sophisticated corporate boardroom designed to foster creativity and high-level decisions.</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-item group relative rounded-3xl overflow-hidden shadow-2xl border border-atelier-800 bg-atelier-950" data-category="residential">
+                    <div class="relative h-80 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=800" alt="Luxury Master Bedroom" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-atelier-950 via-atelier-950/40 to-transparent opacity-90 group-hover:opacity-95 transition-opacity"></div>
+                    </div>
+                    <div class="absolute inset-x-0 bottom-0 p-8 flex flex-col justify-end space-y-2">
+                        <span class="text-xs uppercase font-bold tracking-widest text-gold-400">Residential Interior</span>
+                        <h3 class="text-2xl font-serif font-bold text-white">Velvet Horizon Bedroom</h3>
+                        <p class="text-atelier-300 text-xs font-light">Plush upholstered headboards, custom wardrobe lighting, and soothing neutral palettes.</p>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-item group relative rounded-3xl overflow-hidden shadow-2xl border border-atelier-800 bg-atelier-950" data-category="commercial">
+                    <div class="relative h-80 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800" alt="Luxury Boutique Showroom" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-atelier-950 via-atelier-950/40 to-transparent opacity-90 group-hover:opacity-95 transition-opacity"></div>
+                    </div>
+                    <div class="absolute inset-x-0 bottom-0 p-8 flex flex-col justify-end space-y-2">
+                        <span class="text-xs uppercase font-bold tracking-widest text-gold-400">Commercial Interior</span>
+                        <h3 class="text-2xl font-serif font-bold text-white">L'Atelier Haute Couture Boutique</h3>
+                        <p class="text-atelier-300 text-xs font-light">Immersive retail experience with brushed brass accents and curved display niches.</p>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-item group relative rounded-3xl overflow-hidden shadow-2xl border border-atelier-800 bg-atelier-950" data-category="kitchen">
+                    <div class="relative h-80 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800" alt="Spa-Grade Luxury Bathroom" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-atelier-950 via-atelier-950/40 to-transparent opacity-90 group-hover:opacity-95 transition-opacity"></div>
+                    </div>
+                    <div class="absolute inset-x-0 bottom-0 p-8 flex flex-col justify-end space-y-2">
+                        <span class="text-xs uppercase font-bold tracking-widest text-gold-400">Kitchen & Bath</span>
+                        <h3 class="text-2xl font-serif font-bold text-white">The Onyx Spa Bathroom</h3>
+                        <p class="text-atelier-300 text-xs font-light">Freestanding soaking tub framed by dark stone tiles and warm indirect lighting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process Section -->
+    <section id="process" class="py-24 lg:py-32 bg-atelier-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
+                <div class="inline-flex items-center gap-2 text-gold-400 text-xs font-semibold uppercase tracking-[0.25em]">
+                    <i class="fa-solid fa-route"></i> Seamless Journey
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white">
+                    Our 4-Step Design Process
+                </h2>
+                <p class="text-atelier-300 text-base">
+                    How we transform your raw architectural space into a breathtaking luxury reality.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                <!-- Step 1 -->
+                <div class="bg-atelier-900/60 p-8 rounded-3xl border border-atelier-800 relative">
+                    <div class="text-gold-500 font-serif font-bold text-5xl opacity-30 mb-4">01</div>
+                    <h3 class="text-xl font-serif font-bold text-white mb-3">Consultation & Vision</h3>
+                    <p class="text-atelier-300 text-sm font-light leading-relaxed">
+                        We sit down to understand your lifestyle, aesthetic preferences, functional needs, and spatial aspirations.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-atelier-900/60 p-8 rounded-3xl border border-atelier-800 relative">
+                    <div class="text-gold-500 font-serif font-bold text-5xl opacity-30 mb-4">02</div>
+                    <h3 class="text-xl font-serif font-bold text-white mb-3">Concept & 3D Render</h3>
+                    <p class="text-atelier-300 text-sm font-light leading-relaxed">
+                        Our principal designers craft mood boards and photorealistic 3D visualizations so you can experience your future space.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-atelier-900/60 p-8 rounded-3xl border border-atelier-800 relative">
+                    <div class="text-gold-500 font-serif font-bold text-5xl opacity-30 mb-4">03</div>
+                    <h3 class="text-xl font-serif font-bold text-white mb-3">Material & Crafting</h3>
+                    <p class="text-atelier-300 text-sm font-light leading-relaxed">
+                        Selection of premium fabrics, exotic stones, bespoke hardware, and meticulous fabrication by master artisans.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-atelier-900/60 p-8 rounded-3xl border border-atelier-800 relative">
+                    <div class="text-gold-500 font-serif font-bold text-5xl opacity-30 mb-4">04</div>
+                    <h3 class="text-xl font-serif font-bold text-white mb-3">Final Handover</h3>
+                    <p class="text-atelier-300 text-sm font-light leading-relaxed">
+                        Flawless execution, deep cleaning, final styling, and welcoming you into your newly elevated sanctuary.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials Section -->
+    <section id="testimonials" class="py-24 lg:py-32 bg-atelier-900 border-t border-atelier-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-flex items-center gap-2 text-gold-400 text-xs font-semibold uppercase tracking-[0.25em]">
+                    <i class="fa-solid fa-quote-left"></i> Client Praise
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white">
+                    Words From Our Distinguished Patrons
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-atelier-950 p-8 rounded-3xl border border-atelier-800 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex text-gold-400 gap-1 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-atelier-200 text-sm italic font-light leading-relaxed">
+                            "Parvaa Concepts Atelier transformed our penthouse into an absolute masterpiece. Their attention to detail and thoughtful spatial planning is truly world-class."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-atelier-800/80">
+                        <div class="w-12 h-12 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center font-serif font-bold">AS</div>
+                        <div>
+                            <div class="font-serif font-bold text-white text-sm">Aditya Singhania</div>
+                            <div class="text-xs text-atelier-400">Luxury Villa Owner</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-atelier-950 p-8 rounded-3xl border border-atelier-800 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex text-gold-400 gap-1 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-atelier-200 text-sm italic font-light leading-relaxed">
+                            "Our corporate office designed by Parvaa has completely elevated our brand image. Clients are consistently blown away when they step into our boardroom."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-atelier-800/80">
+                        <div class="w-12 h-12 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center font-serif font-bold">NK</div>
+                        <div>
+                            <div class="font-serif font-bold text-white text-sm">Natasha Kapoor</div>
+                            <div class="text-xs text-atelier-400">Managing Director, FinTech HQ</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-atelier-950 p-8 rounded-3xl border border-atelier-800 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex text-gold-400 gap-1 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-atelier-200 text-sm italic font-light leading-relaxed">
+                            "Timeless, tailored, and thoughtful—they live up to every word of their tagline. Absolute professionalism from concept handover to final styling."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-atelier-800/80">
+                        <div class="w-12 h-12 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center font-serif font-bold">RV</div>
+                        <div>
+                            <div class="font-serif font-bold text-white text-sm">Rohan Varma</div>
+                            <div class="text-xs text-atelier-400">Residential Client</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Consultation Section -->
+    <section id="contact" class="py-24 lg:py-32 bg-atelier-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-8">
+                    <div class="inline-flex items-center gap-2 text-gold-400 text-xs font-semibold uppercase tracking-[0.25em]">
+                        <i class="fa-solid fa-headset"></i> Start Your Project
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white leading-tight">
+                        Let's Design Your Dream Space Together
+                    </h2>
+                    <p class="text-atelier-300 text-base font-light leading-relaxed">
+                        Connect directly with our principal designers or schedule an exclusive consultation at our studio. We look forward to elevating your lifestyle.
+                    </p>
+
+                    <div class="space-y-6 pt-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-atelier-900 border border-atelier-800 text-gold-400 flex items-center justify-center shrink-0 text-lg">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-white">Direct Phone</h4>
+                                <a href="tel:08123868687" class="text-gold-400 hover:underline text-lg font-semibold mt-0.5 block">08123868687</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-atelier-900 border border-atelier-800 text-gold-400 flex items-center justify-center shrink-0 text-lg">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-white">Official Email</h4>
+                                <a href="mailto:parvaaconceptsatelier87@gmail.com" class="text-gold-400 hover:underline text-sm sm:text-base font-semibold mt-0.5 block">parvaaconceptsatelier87@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-atelier-900 border border-atelier-800 text-gold-400 flex items-center justify-center shrink-0 text-lg">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-white">Studio Headquarters</h4>
+                                <p class="text-atelier-300 text-sm mt-0.5">Parvaa Concepts Atelier Pvt Ltd • Luxury Interior Design Studio</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consultation Form -->
+                <div class="lg:col-span-6 bg-atelier-900 p-8 sm:p-10 rounded-3xl border border-atelier-800 shadow-2xl">
+                    <h3 class="text-2xl font-serif font-bold text-white mb-2">Book a Consultation</h3>
+                    <p class="text-atelier-300 text-xs mb-6">Fill out the details below and our design director will get in touch with you shortly.</p>
+
+                    <form onsubmit="handleConsultationSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-atelier-300 mb-2">Full Name</label>
+                            <input type="text" id="c-name" required placeholder="Enter your full name" class="w-full bg-atelier-950 border border-atelier-800 rounded-xl px-4 py-3 text-white placeholder-atelier-500 text-sm focus:outline-none focus:border-gold-500">
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-atelier-300 mb-2">Phone Number</label>
+                                <input type="tel" id="c-phone" required placeholder="Enter phone number" class="w-full bg-atelier-950 border border-atelier-800 rounded-xl px-4 py-3 text-white placeholder-atelier-500 text-sm focus:outline-none focus:border-gold-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-atelier-300 mb-2">Project Type</label>
+                                <select id="c-type" class="w-full bg-atelier-950 border border-atelier-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-gold-500">
+                                    <option value="Residential Interior">Residential Interior</option>
+                                    <option value="Commercial Interior">Commercial Interior</option>
+                                    <option value="Kitchen & Bath">Kitchen & Bath</option>
+                                    <option value="Turnkey Execution">Turnkey Execution</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-atelier-300 mb-2">Project Vision / Details</label>
+                            <textarea id="c-msg" rows="3" placeholder="Tell us about your property, scope, and timeline..." class="w-full bg-atelier-950 border border-atelier-800 rounded-xl px-4 py-3 text-white placeholder-atelier-500 text-sm focus:outline-none focus:border-gold-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gold-500 hover:bg-gold-600 text-atelier-950 font-bold py-4 rounded-xl transition-all shadow-lg text-xs uppercase tracking-widest flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Send Inquiry via WhatsApp / Email
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-atelier-950 text-atelier-300 pt-16 pb-12 border-t border-atelier-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-atelier-900 border border-gold-500/50 flex items-center justify-center text-gold-500 text-lg">
+                        <i class="fa-solid fa-feather-pointed"></i>
+                    </div>
+                    <span class="text-lg font-serif font-bold text-white tracking-wider">Parvaa Concepts</span>
+                </div>
+                <p class="text-xs text-atelier-400 leading-relaxed font-light">
+                    Parvaa Concepts Atelier Pvt Ltd. Timeless. Tailored. Thoughtful. ✨ Designing spaces that elevate lifestyles 🌿.
+                </p>
+                <div class="flex gap-3 pt-2">
+                    <a href="tel:08123868687" class="w-9 h-9 rounded-full bg-atelier-900 hover:bg-gold-500 hover:text-atelier-950 text-gold-400 flex items-center justify-center transition-all border border-atelier-800">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                    <a href="mailto:parvaaconceptsatelier87@gmail.com" class="w-9 h-9 rounded-full bg-atelier-900 hover:bg-gold-500 hover:text-atelier-950 text-gold-400 flex items-center justify-center transition-all border border-atelier-800">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white font-serif font-bold text-sm uppercase tracking-wider mb-4">Quick Links</h4>
+                <ul class="space-y-2.5 text-xs">
+                    <li><a href="#home" class="hover:text-gold-400 transition-colors">Home</a></li>
+                    <li><a href="#about" class="hover:text-gold-400 transition-colors">Design Philosophy</a></li>
+                    <li><a href="#services" class="hover:text-gold-400 transition-colors">Atelier Services</a></li>
+                    <li><a href="#portfolio" class="hover:text-gold-400 transition-colors">Portfolio</a></li>
+                    <li><a href="#contact" class="hover:text-gold-400 transition-colors">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-serif font-bold text-sm uppercase tracking-wider mb-4">Expertise</h4>
+                <ul class="space-y-2.5 text-xs">
+                    <li><a href="#services" class="hover:text-gold-400 transition-colors">Luxury Residential Interiors</a></li>
+                    <li><a href="#services" class="hover:text-gold-400 transition-colors">Commercial & Office Design</a></li>
+                    <li><a href="#services" class="hover:text-gold-400 transition-colors">Bespoke Furniture & Joinery</a></li>
+                    <li><a href="#services" class="hover:text-gold-400 transition-colors">Turnkey Project Execution</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-serif font-bold text-sm uppercase tracking-wider mb-4">Contact Info</h4>
+                <ul class="space-y-2.5 text-xs text-atelier-400">
+                    <li><i class="fa-solid fa-phone text-gold-500 mr-2"></i> 08123868687</li>
+                    <li><i class="fa-solid fa-envelope text-gold-500 mr-2"></i> parvaaconceptsatelier87@gmail.com</li>
+                    <li><i class="fa-solid fa-location-dot text-gold-500 mr-2"></i> Luxury Interior Design Studio</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 pt-8 border-t border-atelier-900 flex flex-col sm:flex-row justify-between items-center text-xs text-atelier-500 gap-4">
+            <p>&copy; 2026 Parvaa Concepts Atelier Pvt Ltd. All Rights Reserved.</p>
+            <p>Timeless. Tailored. Thoughtful. ✨</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp & Call Buttons -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <!-- Call Button -->
+        <a href="tel:08123868687" aria-label="Call Us" class="w-14 h-14 bg-atelier-900 hover:bg-atelier-800 text-gold-400 rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110 border-2 border-gold-500/50">
+            <i class="fa-solid fa-phone text-xl"></i>
+        </a>
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/918123868687?text=Hello%20Parvaa%20Concepts%20Atelier,%20I%20would%20like%20to%20discuss%20an%20interior%20design%20project." target="_blank" aria-label="Chat on WhatsApp" class="w-14 h-14 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110 border-2 border-white/30">
+            <i class="fa-brands fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Portfolio Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-gold-500', 'text-atelier-950');
+                    b.classList.add('bg-atelier-950', 'text-atelier-300', 'border', 'border-atelier-800');
+                });
+                btn.classList.remove('bg-atelier-950', 'text-atelier-300', 'border', 'border-atelier-800');
+                btn.classList.add('bg-gold-500', 'text-atelier-950');
+
+                const filter = btn.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Consultation Form Handler
+        function handleConsultationSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('c-name').value;
+            const phone = document.getElementById('c-phone').value;
+            const type = document.getElementById('c-type').value;
+            const msg = document.getElementById('c-msg').value;
+
+            const text = `Hello Parvaa Concepts Atelier,%0A%0A*Consultation Inquiry*%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Service:* ${type}%0A*Details:* ${msg}`;
+            window.open(`https://wa.me/918123868687?text=${text}`, '_blank');
+        }
+    </script>
+</body>
+</html>
